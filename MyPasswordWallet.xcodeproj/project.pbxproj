@@ -13,6 +13,8 @@
 		2FF901E028AAB19000274CDA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2FF901DE28AAB19000274CDA /* Main.storyboard */; };
 		2FF901E228AAB19200274CDA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2FF901E128AAB19200274CDA /* Assets.xcassets */; };
 		2FF901E528AAB19200274CDA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2FF901E328AAB19200274CDA /* LaunchScreen.storyboard */; };
+		2FF901EE28AAB48500274CDA /* AddController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF901ED28AAB48500274CDA /* AddController.swift */; };
+		2FF901F028AAB49C00274CDA /* DetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF901EF28AAB49C00274CDA /* DetailController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		2FF901E128AAB19200274CDA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2FF901E428AAB19200274CDA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2FF901E628AAB19200274CDA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2FF901ED28AAB48500274CDA /* AddController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddController.swift; sourceTree = "<group>"; };
+		2FF901EF28AAB49C00274CDA /* DetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +60,25 @@
 		2FF901D728AAB19000274CDA /* MyPasswordWallet */ = {
 			isa = PBXGroup;
 			children = (
+				2FF901EC28AAB45F00274CDA /* Controller */,
 				2FF901D828AAB19000274CDA /* AppDelegate.swift */,
 				2FF901DA28AAB19000274CDA /* SceneDelegate.swift */,
-				2FF901DC28AAB19000274CDA /* ViewController.swift */,
 				2FF901DE28AAB19000274CDA /* Main.storyboard */,
 				2FF901E128AAB19200274CDA /* Assets.xcassets */,
 				2FF901E328AAB19200274CDA /* LaunchScreen.storyboard */,
 				2FF901E628AAB19200274CDA /* Info.plist */,
 			);
 			path = MyPasswordWallet;
+			sourceTree = "<group>";
+		};
+		2FF901EC28AAB45F00274CDA /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2FF901DC28AAB19000274CDA /* ViewController.swift */,
+				2FF901ED28AAB48500274CDA /* AddController.swift */,
+				2FF901EF28AAB49C00274CDA /* DetailController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,6 +155,8 @@
 				2FF901DD28AAB19000274CDA /* ViewController.swift in Sources */,
 				2FF901D928AAB19000274CDA /* AppDelegate.swift in Sources */,
 				2FF901DB28AAB19000274CDA /* SceneDelegate.swift in Sources */,
+				2FF901F028AAB49C00274CDA /* DetailController.swift in Sources */,
+				2FF901EE28AAB48500274CDA /* AddController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
