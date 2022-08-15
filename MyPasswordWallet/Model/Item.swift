@@ -17,6 +17,18 @@ class Item {
     private let _userNameKey = "userName"
     private let _passwordKey = "password"
     
+    var safeSite: String {
+        return site ?? ""
+    }
+    
+    var safaUserName: String {
+        return userName ?? ""
+    }
+    
+    var safePassword: String {
+        return password ?? ""
+    }
+    
     init(site: String?, userName: String?, password: String?) {
         self.site = site
         self.userName = userName

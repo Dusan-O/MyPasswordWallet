@@ -15,14 +15,25 @@ class DetailController: UIViewController {
     @IBOutlet weak var showSwitch: UISwitch!
     @IBOutlet weak var pwdLabel: UILabel!
     
+    var item: Item!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        showSwitch.isOn = false
+        siteLabel.text = item.safeSite
+        userNameLabel.text = item.safaUserName
+        pwdLabel.text = item.safePassword
+        setLabelSwitch(bool: !showSwitch.isOn)
+    }
+    
+    func setLabelSwitch(bool: Bool) {
+        pwdLabel.isHidden = !bool
+        showHidePwd.text = !bool ? "Montrer le mot de passe" : "Cacher le mot de passe"
     }
     
     @IBAction func switchChanged(_ sender: UISwitch) {
+        setLabelSwitch(bool: sender.isOn)
     }
     
 
