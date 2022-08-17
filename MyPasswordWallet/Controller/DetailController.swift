@@ -37,8 +37,20 @@ class DetailController: UIViewController {
         showHidePwd.text = !bool ? "Montrer le mot de passe" : "Cacher le mot de passe"
     }
     
+    func auth() {
+        if context.canEvaluatePolicy(policy, error: &error) {
+            context.evaluatePolicy(policy, localizedReason: reason) { success, error in
+                DispatchQueue.main.async {
+                    if success {
+                        self.setLabelSwitch(bool: self.showSwitch.isOn)
+                    }
+                }
+            }
+        }
+    }
+    
     @IBAction func switchChanged(_ sender: UISwitch) {
-        setLabelSwitch(bool: sender.isOn)
+        auth()
     }
     
 
