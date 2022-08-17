@@ -46,10 +46,17 @@ class DetailController: UIViewController {
                     }
                 }
             }
+        } else {
+            print(error?.localizedDescription)
         }
     }
     
     @IBAction func switchChanged(_ sender: UISwitch) {
+        if sender.isOn {
+            auth()
+        } else {
+            setLabelSwitch(bool: sender.isOn)
+        }
         auth()
     }
     
