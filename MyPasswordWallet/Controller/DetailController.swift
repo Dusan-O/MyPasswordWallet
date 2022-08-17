@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import LocalAuthentication
 
 class DetailController: UIViewController {
     
@@ -16,6 +17,10 @@ class DetailController: UIViewController {
     @IBOutlet weak var pwdLabel: UILabel!
     
     var item: Item!
+    var context = LAContext()
+    var error: NSError?
+    var reason: String = "Authentifiez vous pour voir le mot de passe"
+    var policy: LAPolicy = .deviceOwnerAuthenticationWithBiometrics
     
     
     override func viewDidLoad() {
